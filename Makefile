@@ -2,11 +2,11 @@ GIT_VERSION = $(shell git describe --always --abbrev=7 --dirty)
 
 BASE_IMAGE_NAME        = lightweight-docker-go
 
-RC_IMAGE_NAME          = $(DOCKER_REPO)$(BASE_IMAGE_NAME):$(GIT_VERSION)
-RC_MUTABLE_IMAGE_NAME  = $(DOCKER_REPO)$(BASE_IMAGE_NAME):canary
+RC_IMAGE_NAME          = $(RC_DOCKER_REPO)$(BASE_IMAGE_NAME):$(GIT_VERSION)
+RC_MUTABLE_IMAGE_NAME  = $(RC_DOCKER_REPO)$(BASE_IMAGE_NAME):canary
 
-REL_IMAGE_NAME         = $(DOCKER_REPO)$(BASE_IMAGE_NAME):$(REL_VERSION)
-REL_MUTABLE_IMAGE_NAME = $(DOCKER_REPO)$(BASE_IMAGE_NAME):latest
+REL_IMAGE_NAME         = $(REL_DOCKER_REPO)$(BASE_IMAGE_NAME):$(REL_VERSION)
+REL_MUTABLE_IMAGE_NAME = $(REL_DOCKER_REPO)$(BASE_IMAGE_NAME):latest
 
 # Checks for the existence of a docker client and prints a nice error message
 # if it isn't present

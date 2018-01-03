@@ -10,7 +10,7 @@ jobs:
   publish-rc-images:
     machine: true
     environment:
-      DOCKER_REPO: quay.io/deisci/
+      RC_DOCKER_REPO: quay.io/deisci/
     steps:
       - checkout
       - run:
@@ -22,7 +22,8 @@ jobs:
   publish-release-images:
     machine: true
     environment:
-      DOCKER_REPO: quay.io/deis/
+      RC_DOCKER_REPO: quay.io/deisci/
+      REL_DOCKER_REPO: quay.io/deis/
     steps:
       - checkout
       - run:
