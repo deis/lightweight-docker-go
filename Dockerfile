@@ -1,4 +1,4 @@
-FROM golang:1.10.0
+FROM golang:1.11.0
 
 ENV DEP_VERSION=v0.4.1
 
