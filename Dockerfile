@@ -1,9 +1,9 @@
-FROM golang:1.11.6
+FROM golang:1.12.17
 
-ENV DEP_VERSION=v0.5.0
+ENV DEP_VERSION=v0.5.4
 ENV GOLANGCI_LINT_VERSION=v1.29.0
-ENV PACKR2_VERSION=v2.0.8
-ENV GO_TOOLS_VERSION=release-branch.go1.11
+ENV PACKR2_VERSION=v2.8.1
+ENV GO_TOOLS_VERSION=release-branch.go1.12
 
 RUN curl -sSL \
     -o /usr/local/bin/dep \
